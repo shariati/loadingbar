@@ -1,6 +1,6 @@
 {
   "name": "loadingbar",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A customisable progressbar for CLI",
   "license": "MIT",
   "keywords": [
@@ -13,9 +13,9 @@
     "progress-bar",
     "loadingbar"
   ],
-  "homepage": "https://github.com/shariati/progressbar",
+  "homepage": "https://github.com/shariati/loadingbar",
   "author": "Amin Shariati",
-  "repository": "shariati/progressbar",
+  "repository": "shariati/loadingbar",
   "bin": "cli.js",
   "files": [
     "index.js",
