@@ -1,5 +1,5 @@
 {
-  "name": "progressbar",
+  "name": "loadingbar",
   "version": "1.0.0",
   "description": "A customisable progressbar for CLI",
   "license": "MIT",
@@ -10,7 +10,8 @@
     "loader",
     "cli",
     "cli-app",
-    "progress-bar"
+    "progress-bar",
+    "loadingbar"
   ],
   "homepage": "https://github.com/shariati/progressbar",
   "author": "Amin Shariati",
