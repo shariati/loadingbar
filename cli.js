@@ -19,7 +19,7 @@ require('taketalk')({
       '    progressbar <percentage> --sizeInColumns 20',
       '',
       '  Example',
-      '    progressbar "10"',
+      '    progressbar 10',
       progressbar('10')
     ].join('\n'));
   },
