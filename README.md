@@ -1,22 +1,21 @@
-# Progress Bar [![npm version](https://badge.fury.io/js/progressbar.svg)](https://badge.fury.io/js/progressbar)[![Build Status](https://travis-ci.org/shariati/progressbar.svg?branch=master)](https://travis-ci.org/shariati/progressbar)[![Coverage Status](https://coveralls.io/repos/github/shariati/progressbar/badge.svg?branch=master)](https://coveralls.io/github/shariati/progressbar?branch=master)
-Masks the input strings
+# Progress Bar [![npm version](https://badge.fury.io/js/loadingbar.svg)](https://badge.fury.io/js/loadingbar)[![Build Status](https://travis-ci.org/shariati/progressbar.svg?branch=master)](https://travis-ci.org/shariati/progressbar)[![Coverage Status](https://coveralls.io/repos/github/shariati/progressbar/badge.svg?branch=master)](https://coveralls.io/github/shariati/progressbar?branch=master)
+A customizable loading bar (Progressbar)
 
 ![](screenshot.png)
-
 
 ## Install
 
 ```
-$ npm install --save progressbar
+$ npm install --save loadingbar
 ```
 
 
 ## Usage
 
 ```js
-const progressbar = require('progressbar');
+const loadingbar = require('loadingbar');
 
-progressbar('20');
+loadingbar('20');
 
 ```
 
@@ -24,20 +23,20 @@ progressbar('20');
 ## CLI
 
 ```
-$ npm install --global progressbar
+$ npm install --global loadingbar
 ```
 
 ```
-$ progressbar --help
+$ loadingbar --help
 
   Usage
-    progressbar <percentage>
-    progressbar <percentage> --color red
-    progressbar <percentage> --design ♫
-    progressbar <percentage> --sizeInColumns 20
+    loadingbar <percentage>
+    loadingbar <percentage> --color red
+    loadingbar <percentage> --design ♫
+    loadingbar <percentage> --sizeInColumns 20
 
   Example
-    progressbar 10
-    progressbar 10 --color red
-    progressbar 10 --color blue --design #
-    progressbar 10 --color blue --design # --sizeInColumns 20
+    loadingbar 10
+    loadingbar 10 --color red
+    loadingbar 10 --color blue --design #
+    loadingbar 10 --color blue --design # --sizeInColumns 20

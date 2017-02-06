@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 'use strict';
 var pkg = require('./package.json');
-var progressbar = require('./');
+var loadingbar = require('./');
 
 require('taketalk')({
   init: function (percentageValue, options) {
-    console.log(progressbar(percentageValue, options));
+    console.log(loadingbar(percentageValue, options));
   },
   help: function () {
     console.log([
@@ -13,14 +13,14 @@ require('taketalk')({
       '  ' + pkg.description,
       '',
       '  Usage',
-      '    progressbar <percentage>',
-      '    progressbar <percentage> --color red',
-      '    progressbar <percentage> --design ♫',
-      '    progressbar <percentage> --sizeInColumns 20',
+      '    loadingbar <percentage>',
+      '    loadingbar <percentage> --color red',
+      '    loadingbar <percentage> --design ♫',
+      '    loadingbar <percentage> --sizeInColumns 20',
       '',
       '  Example',
-      '    progressbar 10',
-      progressbar('10')
+      '    loadingbar 10',
+      loadingbar('10')
     ].join('\n'));
   },
   version: pkg.version
