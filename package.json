@@ -24,7 +24,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "xo && mocha"
+    "test": "xo"
   },
   "dependencies": {
     "ansi-regex": "^2.0.0",
@@ -33,7 +33,6 @@
     "taketalk": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*",
     "xo": "*"
   },
   "xo": {
