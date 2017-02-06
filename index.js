@@ -1,6 +1,7 @@
 'use strict';
 
 var chalk = require('chalk');
+
 module.exports = function (percentageValue, options) {
   options = options || {};
   process.stdout.cursorTo(0);
@@ -76,4 +77,3 @@ module.exports = function (percentageValue, options) {
     process.stdout.write(` `);
   }
 };
-
