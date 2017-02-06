@@ -1,18 +1,20 @@
 'use strict';
 
 var chalk = require('chalk');
-
-module.exports = function (percentageValue, sizeInColumns, options) {
-  sizeInColumns = (sizeInColumns || 10);
+module.exports = function (percentageValue, options) {
   options = options || {};
   process.stdout.cursorTo(0);
   var MAXIMUM = process.stdout.columns;
   var PROGRESS_BAR_COLOR = 'green';
   var counter = 0;
+  var PEOGRESSBAR_SIZE = 10;
 
   // NOTE: A complete list can be found at https://en.wikipedia.org/wiki/Block_Elements
   var PROGRESS_BAR_CHARACTER_DESIGN = '▄';
 
+  if (options.sizeInColumns) {
+    PEOGRESSBAR_SIZE = options.sizeInColumns;
+  }
   if (options.color) {
     PROGRESS_BAR_COLOR = options.color;
   }
@@ -21,8 +23,8 @@ module.exports = function (percentageValue, sizeInColumns, options) {
   }
   var progressCharacter = PROGRESS_BAR_CHARACTER_DESIGN;
   var progressBar = '';
-  if (sizeInColumns > process.stdout.columns || sizeInColumns < 1) {
-    sizeInColumns = MAXIMUM;
+  if (PEOGRESSBAR_SIZE > process.stdout.columns || PEOGRESSBAR_SIZE < 1) {
+    PEOGRESSBAR_SIZE = MAXIMUM;
   }
   if (percentageValue > 100) {
     percentageValue = 100;
@@ -30,11 +32,11 @@ module.exports = function (percentageValue, sizeInColumns, options) {
   if (percentageValue < 0) {
     percentageValue = 0;
   }
-  for (counter = 0; counter < sizeInColumns; counter++) {
+  for (counter = 0; counter < PEOGRESSBAR_SIZE; counter++) {
     progressBar = chalk.gray(progressCharacter);
     process.stdout.write(`${progressBar}`);
   }
-  var value = Math.floor((percentageValue * sizeInColumns) / 100);
+  var value = Math.floor((percentageValue * PEOGRESSBAR_SIZE) / 100);
   for (counter = 0; counter < value; counter++) {
     progressBar = chalk.blue(progressCharacter);
     switch (PROGRESS_BAR_COLOR) {
@@ -70,7 +72,8 @@ module.exports = function (percentageValue, sizeInColumns, options) {
   if (options.hasNewLine) {
     process.stdout.write(`\n`);
   } else {
-    process.stdout.cursorTo(sizeInColumns + 1);
+    process.stdout.cursorTo(PEOGRESSBAR_SIZE + 1);
     process.stdout.write(` `);
   }
 };
+
