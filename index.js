@@ -3,7 +3,9 @@
 var chalk = require('chalk');
 
 module.exports = function (percentageValue, sizeInColumns, options) {
+  sizeInColumns = (sizeInColumns || 10);
   options = options || {};
+  process.stdout.cursorTo(0);
   var MAXIMUM = process.stdout.columns;
   var PROGRESS_BAR_COLOR = 'green';
   var counter = 0;
@@ -14,13 +16,8 @@ module.exports = function (percentageValue, sizeInColumns, options) {
   if (options.color) {
     PROGRESS_BAR_COLOR = options.color;
   }
-
   if (options.design) {
-    if (options.design.length > 1) {
-      PROGRESS_BAR_CHARACTER_DESIGN = options.design.charAt(0);
-    } else {
-      PROGRESS_BAR_CHARACTER_DESIGN = options.design;
-    }
+    PROGRESS_BAR_CHARACTER_DESIGN = options.design.charAt(0);
   }
   var progressCharacter = PROGRESS_BAR_CHARACTER_DESIGN;
   var progressBar = '';
