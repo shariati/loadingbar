@@ -1,6 +1,6 @@
 {
   "name": "loadingbar",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A customisable progressbar for CLI",
   "license": "MIT",
   "keywords": [
