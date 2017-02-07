@@ -15,7 +15,7 @@ $ npm install --save loadingbar
 ```js
 const loadingbar = require('loadingbar');
 
-loadingbar('20');
+loadingbar(20);
 
 ```
 
