@@ -1,5 +1,7 @@
+These are our loading bar examples.
+
 # Loading Bar [![npm version](https://badge.fury.io/js/loadingbar.svg)](https://badge.fury.io/js/loadingbar)[![Build Status](https://travis-ci.org/shariati/loadingbar.svg?branch=master)](https://travis-ci.org/shariati/loadingbar)[![Coverage Status](https://coveralls.io/repos/github/shariati/loadingbar/badge.svg?branch=master)](https://coveralls.io/github/shariati/loadingbar?branch=master)
-A customisable loading bar (Progressbar)
+A customisable loading bar (Progress bar)
 
 ![](screenshot.png)
 
