@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 'use strict';
-let pkg = require('./package.json');
-let loadingbar = require('./');
+const pkg = require('./package.json');
+const loadingbar = require('./');
 
 require('taketalk')({
-  init: function (percentageValue, options) {
+  init(percentageValue, options) {
     console.log(loadingbar(percentageValue, options));
   },
-  help: function () {
+  help() {
     console.log([
       '',
       '  ' + pkg.description,
