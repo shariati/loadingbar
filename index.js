@@ -1,17 +1,17 @@
 'use strict';
 
-var chalk = require('chalk');
+const chalk = require('chalk');
 
 module.exports = function (percentageValue, options) {
   options = options || {};
   process.stdout.cursorTo(0);
-  var MAXIMUM = process.stdout.columns;
-  var PROGRESS_BAR_COLOR = 'green';
-  var counter = 0;
-  var PEOGRESSBAR_SIZE = 10;
+  const MAXIMUM = process.stdout.columns;
+  let PROGRESS_BAR_COLOR = 'green';
+  let counter = 0;
+  let PEOGRESSBAR_SIZE = 10;
 
   // NOTE: A complete list can be found at https://en.wikipedia.org/wiki/Block_Elements
-  var PROGRESS_BAR_CHARACTER_DESIGN = '▄';
+  let PROGRESS_BAR_CHARACTER_DESIGN = '▄';
 
   if (options.sizeInColumns) {
     PEOGRESSBAR_SIZE = options.sizeInColumns;
@@ -22,8 +22,8 @@ module.exports = function (percentageValue, options) {
   if (options.design) {
     PROGRESS_BAR_CHARACTER_DESIGN = options.design.charAt(0);
   }
-  var progressCharacter = PROGRESS_BAR_CHARACTER_DESIGN;
-  var progressBar = '';
+  const PROGRESS_CHARACTER = PROGRESS_BAR_CHARACTER_DESIGN;
+  let progressBar = '';
   if (PEOGRESSBAR_SIZE > process.stdout.columns || PEOGRESSBAR_SIZE < 1) {
     PEOGRESSBAR_SIZE = MAXIMUM;
   }
@@ -34,37 +34,37 @@ module.exports = function (percentageValue, options) {
     percentageValue = 0;
   }
   for (counter = 0; counter < PEOGRESSBAR_SIZE; counter++) {
-    progressBar = chalk.gray(progressCharacter);
+    progressBar = chalk.gray(PROGRESS_CHARACTER);
     process.stdout.write(`${progressBar}`);
   }
-  var value = Math.floor((percentageValue * PEOGRESSBAR_SIZE) / 100);
-  for (counter = 0; counter < value; counter++) {
-    progressBar = chalk.blue(progressCharacter);
+  const STEPS = Math.floor((percentageValue * PEOGRESSBAR_SIZE) / 100);
+  for (counter = 0; counter < STEPS; counter++) {
+    progressBar = chalk.blue(PROGRESS_CHARACTER);
     switch (PROGRESS_BAR_COLOR) {
       case 'red':
-        progressBar = chalk.red(progressCharacter);
+        progressBar = chalk.red(PROGRESS_CHARACTER);
         break;
       case 'green':
-        progressBar = chalk.green(progressCharacter);
+        progressBar = chalk.green(PROGRESS_CHARACTER);
         break;
       case 'yellow':
-        progressBar = chalk.yellow(progressCharacter);
+        progressBar = chalk.yellow(PROGRESS_CHARACTER);
         break;
       case 'magenta':
-        progressBar = chalk.magenta(progressCharacter);
+        progressBar = chalk.magenta(PROGRESS_CHARACTER);
         break;
       case 'cyan':
-        progressBar = chalk.cyan(progressCharacter);
+        progressBar = chalk.cyan(PROGRESS_CHARACTER);
         break;
       case 'white':
-        progressBar = chalk.white(progressCharacter);
+        progressBar = chalk.white(PROGRESS_CHARACTER);
         break;
       case 'gray':
-        progressBar = chalk.gray(progressCharacter);
+        progressBar = chalk.gray(PROGRESS_CHARACTER);
         break;
       case 'blue':
       default:
-        progressBar = chalk.blue(progressCharacter);
+        progressBar = chalk.blue(PROGRESS_CHARACTER);
         break;
     }
     process.stdout.cursorTo(counter);

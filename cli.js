@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
-var pkg = require('./package.json');
-var loadingbar = require('./');
+let pkg = require('./package.json');
+let loadingbar = require('./');
 
 require('taketalk')({
   init: function (percentageValue, options) {
