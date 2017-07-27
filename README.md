@@ -1,6 +1,8 @@
 # Loading Bar [![npm version](https://badge.fury.io/js/loadingbar.svg)](https://badge.fury.io/js/loadingbar)[![Build Status](https://travis-ci.org/shariati/loadingbar.svg?branch=master)](https://travis-ci.org/shariati/loadingbar)[![Coverage Status](https://coveralls.io/repos/github/shariati/loadingbar/badge.svg?branch=master)](https://coveralls.io/github/shariati/loadingbar?branch=master)[![bitHound Code](https://www.bithound.io/github/shariati/loadingbar/badges/code.svg)](https://www.bithound.io/github/shariati/loadingbar)[![bitHound Dependencies](https://www.bithound.io/github/shariati/loadingbar/badges/dependencies.svg)](https://www.bithound.io/github/shariati/loadingbar/master/dependencies/npm)[![Known Vulnerabilities](https://snyk.io/test/github/shariati/loadingbar/badge.svg)](https://snyk.io/test/github/shariati/loadingbar)
 A customisable loading bar (Progressbar)
 
+These are our loading bar examples.
+
 ![](screenshot.png)
 
 ## Install
