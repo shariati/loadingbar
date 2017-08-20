@@ -64,7 +64,6 @@ module.exports = function (percentageValue, options) {
       case 'gray':
         progressBar = chalk.gray(progressBarCharacterDesign);
         break;
-      case 'blue':
       default:
         progressBar = chalk.blue(progressBarCharacterDesign);
         break;
