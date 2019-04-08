@@ -1,6 +1,6 @@
 {
   "name": "loadingbar",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "A customisable progressbar for CLI",
   "license": "MIT",
   "keywords": [
@@ -25,16 +25,20 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "xo"
+    "test": "standard"
   },
   "dependencies": {
-    "chalk": "^2.0.0",
+    "chalk": "^2.4.2",
     "taketalk": "^1.0.0"
   },
   "devDependencies": {
-    "xo": "^0.18.0"
-  },
-  "xo": {
-    "space": true
+    "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.1.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "mocha": "^6.1.1",
+    "standard": "^12.0.1"
   }
 }
