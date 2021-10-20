@@ -72,9 +72,9 @@ module.exports = function (percentageValue, options) {
     process.stdout.write(`${progressBar}`)
   }
   if (options.hasNewLine) {
-    process.stdout.write(`\n`)
+    process.stdout.write('\n')
   } else {
     process.stdout.cursorTo(progressBarSize + 1)
-    process.stdout.write(` `)
+    process.stdout.write(' ')
   }
 }
