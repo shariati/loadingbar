@@ -11,30 +11,19 @@ module.exports = function (percentageValue, options) {
   // NOTE: A complete list can be found at https://en.wikipedia.org/wiki/Block_Elements
   const PROGRESS_BAR_CHARACTER_DESIGN = '▄'
 
-  let progressBarColor = PROGRESS_BAR_COLOR
-  let progressBarSize = PEOGRESSBAR_SIZE
-  let progressBarCharacterDesign = PROGRESS_BAR_CHARACTER_DESIGN
+  const progressBarColor = options.color ? options.color : PROGRESS_BAR_COLOR
+  let progressBarSize = options.sizeInColumns ? options.sizeInColumns : PEOGRESSBAR_SIZE
+  const progressBarCharacterDesign = options.design ? options.design : PROGRESS_BAR_CHARACTER_DESIGN
   let counter = 0
 
-  if (options.sizeInColumns) {
-    progressBarSize = options.sizeInColumns
-  }
-  if (options.color) {
-    progressBarColor = options.color
-  }
-  if (options.design) {
-    progressBarCharacterDesign = options.design.charAt(0)
-  }
   let progressBar = ''
   if (progressBarSize > process.stdout.columns || progressBarSize < 1) {
     progressBarSize = MAXIMUM
   }
-  if (percentageValue > 100) {
-    percentageValue = 100
-  }
-  if (percentageValue < 0) {
-    percentageValue = 0
-  }
+
+  percentageValue = percentageValue > 100 ? 100 : percentageValue
+  percentageValue = percentageValue < 0 ? 0 : percentageValue
+
   for (counter = 0; counter < progressBarSize; counter++) {
     progressBar = chalk.gray(progressBarCharacterDesign)
     process.stdout.write(`${progressBar}`)
